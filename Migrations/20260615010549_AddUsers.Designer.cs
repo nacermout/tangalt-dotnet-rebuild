@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TangaltAPI.Data;
 
@@ -10,9 +11,11 @@ using TangaltAPI.Data;
 namespace TangaltAPI.Migrations
 {
     [DbContext(typeof(TangaltContext))]
-    partial class TangaltContextModelSnapshot : ModelSnapshot
+    [Migration("20260615010549_AddUsers")]
+    partial class AddUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");

@@ -5,6 +5,17 @@ namespace TangaltAPI.Data
     {
         public static void  Seed(TangaltContext context)
         {
+            // Créer l'admin par défaut si aucun user n'existe
+if (!context.Users.Any())
+{
+    context.Users.Add(new User
+    {
+        Email = "admin@tangalt.com",
+        PasswordHash = BCrypt.Net.BCrypt.HashPassword("Tangalt2026!"),
+        Role = "admin"
+    });
+    context.SaveChanges();
+}
             if (context.Articles.Any()) return;
             var author = new Author
             {
@@ -36,6 +47,42 @@ namespace TangaltAPI.Data
                 CategoryId = category.Id
             });
             context.SaveChanges();
+            context.Articles.AddRange(
+    new Article
+    {
+        Title = "Asfel-iw — Mon retour au pays",
+        Content = "Aqlaɣ-d seld yiwen waseggʷas n tɣellist i yiwen n tama...",
+        Language = "tiz",
+        Slug = "asfel-iw-mon-retour",
+        IsPublished = true,
+        PublishedAt = DateTime.Now,
+        AuthorId = author.Id,
+        CategoryId = category.Id
+    },
+    new Article
+    {
+        Title = "Mohammed Dib — Ou l'immense veilleur des mots",
+        Content = "Mohammed Dib est l'une des figures les plus marquantes de la littérature algérienne...",
+        Language = "fr",
+        Slug = "mohammed-dib-veilleur-des-mots",
+        IsPublished = true,
+        PublishedAt = DateTime.Now,
+        AuthorId = author.Id,
+        CategoryId = category.Id
+    },
+    new Article
+    {
+        Title = "Si Emer Uhemza — Ameskar ur nettwassen",
+        Content = "Yiwen n yimɣaren yellan d amaru amaziɣ ameqqran...",
+        Language = "tiz",
+        Slug = "si-emer-uhemza",
+        IsPublished = true,
+        PublishedAt = DateTime.Now,
+        AuthorId = author.Id,
+        CategoryId = category.Id
+    }
+);
+context.SaveChanges();
         }
     }
 }
