@@ -64,6 +64,8 @@ app.UseHttpsRedirection();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<TangaltContext>();
+    // BDD automatique 
+    context.Database.EnsureCreated();
     DbSeeder.Seed(context);
 }
 
