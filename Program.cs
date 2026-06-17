@@ -16,12 +16,13 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("TangaltFrontend", policy =>
     {
-        policy.SetIsOriginAllowed(origin => 
-                !string.IsNullOrEmpty(origin) && 
-                Uri.TryCreate(origin, UriKind.Absolute, out var uri) && 
-                (uri.Host == "localhost" || uri.Host == "127.0.0.1"))
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins(
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://tangalt-react-csharp.vercel.app"
+      )
+      .AllowAnyHeader()
+      .AllowAnyMethod();
     });
 });
 // Configuration JWT
