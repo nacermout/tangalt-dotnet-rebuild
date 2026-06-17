@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangaltAPI.Tests", "TangaltAPI.Tests\TangaltAPI.Tests.csproj", "{26E7CA5C-A34D-4D29-B246-EE54A94D6E8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangaltAPI", "TangaltAPI.csproj", "{E21BE27A-02A6-4439-94EF-CD5B616B448C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26E7CA5C-A34D-4D29-B246-EE54A94D6E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E7CA5C-A34D-4D29-B246-EE54A94D6E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E7CA5C-A34D-4D29-B246-EE54A94D6E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E7CA5C-A34D-4D29-B246-EE54A94D6E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E21BE27A-02A6-4439-94EF-CD5B616B448C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E21BE27A-02A6-4439-94EF-CD5B616B448C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E21BE27A-02A6-4439-94EF-CD5B616B448C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E21BE27A-02A6-4439-94EF-CD5B616B448C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
